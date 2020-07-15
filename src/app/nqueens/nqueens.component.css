@@ -1,0 +1,30 @@
+#queen-board-button {
+  height: auto;
+
+  padding: 0;
+  text-align: center;
+  width: auto;
+  border: 1px solid black;
+  display: inline-block;
+  justify-content: space-around;
+}
+
+#formElements {
+  text-align: center;
+}
+
+#queensBoard {
+  float: center;
+  text-align: center;
+}
+
+#select-elements {
+  text-align: center;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+}

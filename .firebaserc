@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "sravanthik-fun-apps": {
+      "hosting": {
+        "fun-app": [
+          "sravanthik-fun-apps"
+        ]
+      }
+    }
+  }
+}

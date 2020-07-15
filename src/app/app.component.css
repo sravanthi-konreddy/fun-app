@@ -1,0 +1,10 @@
+#main-div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.bg-dark {
+  background-color: black;
+}

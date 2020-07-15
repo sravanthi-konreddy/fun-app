@@ -1,0 +1,80 @@
+<div class="bg-dark">
+  <h3 class="header">TIC-TAC-TOE</h3>
+
+  <div class="mode">
+    <button (click)="disableTypeClick || manageBot($event.target)" id="2p">
+      2 palyers
+    </button>
+    <h4 id="won"></h4>
+    <button (click)="disableTypeClick || manageBot($event.target)" id="bot">
+      Play with bot
+    </button>
+  </div>
+
+  <div class="board1 bg-dark" id="board1">
+    <div class="board-row">
+      <button
+        value="0"
+        id="b0"
+        (click)="disableClick['b0'] || handleClick($event.target)"
+        class="buttons"
+      ></button>
+      <button
+        value="1"
+        id="b1"
+        (click)="disableClick['b1'] || handleClick($event.target)"
+        class="buttons"
+      ></button>
+      <button
+        value="2"
+        id="b2"
+        (click)="disableClick['b2'] || handleClick($event.target)"
+        class="buttons"
+      ></button>
+    </div>
+    <div class="board-row">
+      <button
+        value="3"
+        id="b3"
+        (click)="disableClick['b3'] || handleClick($event.target)"
+        class="buttons"
+      ></button>
+      <button
+        value="4"
+        id="b4"
+        (click)="disableClick['b4'] || handleClick($event.target)"
+        class="buttons"
+      ></button>
+      <button
+        value="5"
+        id="b5"
+        (click)="disableClick['b5'] || handleClick($event.target)"
+        class="buttons"
+      ></button>
+    </div>
+    <div class="board-row">
+      <button
+        value="6"
+        id="b6"
+        (click)="disableClick['b6'] || handleClick($event.target)"
+        class="buttons"
+      ></button>
+      <button
+        value="7"
+        id="b7"
+        (click)="disableClick['b7'] || handleClick($event.target)"
+        class="buttons"
+      ></button>
+      <button
+        value="8"
+        id="b8"
+        (click)="disableClick['b8'] || handleClick($event.target)"
+        class="buttons"
+      ></button>
+    </div>
+  </div>
+
+  <div>
+    <button id="resetB" (click)="resetGame()">Reset</button>
+  </div>
+</div>

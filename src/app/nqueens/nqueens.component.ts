@@ -156,23 +156,18 @@ export class NqueensComponent implements OnInit {
   displayOnBoard() {
     for (let i = 0; i < this.queensCount; i++) {
       var rowDiv = document.createElement('div');
-      // var rowDiv = document.createElement('button');
+
       rowDiv.setAttribute('id', 'row-for-buttons');
       rowDiv.setAttribute('class', 'container');
-      //rowDiv.setAttribute('style', 'width:100%');
+
       rowDiv.setAttribute('fxLayout', 'row inline');
       rowDiv.style.display = 'inline-flex';
       rowDiv.style.flexDirection = 'row';
-      //fxLayout="row wrap"
-      //rowDiv.setAttribute('fxLayout', 'row');
       for (let j = 0; j < this.queensCount; j++) {
         var rowDiv1 = document.createElement('div');
         var colDiv = document.createElement('button');
         colDiv.setAttribute('id', 'queen-board-button');
         colDiv.setAttribute('class', 'btn btn-light');
-        //colDiv.setAttribute('fxFlex', '');
-        //colDiv.setAttribute('fxLayout', 'row');
-
         colDiv.style.backgroundColor = 'cyan';
         if (this.queensArr[i][j] === 1) {
           colDiv.innerHTML = '&#9819;';
@@ -180,8 +175,6 @@ export class NqueensComponent implements OnInit {
           colDiv.innerHTML = '&#xf059;&nbsp;';
           colDiv.style.color = 'black';
         }
-        //colDiv.innerHTML="&#9813";
-        //colDiv.innerHTML=+queensArr[i][j]
         rowDiv1.appendChild(colDiv);
         //if (j === this.queensCount - 1)
         rowDiv.appendChild(rowDiv1);

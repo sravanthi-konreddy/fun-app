@@ -1,0 +1,11 @@
+.btn {
+  height: auto;
+  float: center;
+  padding: 0;
+  text-align: center;
+  width: auto;
+  border: 1px solid black;
+}
+#row-for-buttons {
+  display: flex;
+}

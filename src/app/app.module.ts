@@ -12,6 +12,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { KmpComponent } from './kmp/kmp.component';
 
 @NgModule({
   declarations: [
@@ -20,10 +21,12 @@ import { HomeComponent } from './home/home.component';
     NqueensComponent,
     DijkstraComponent,
     HomeComponent,
+    KmpComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
@@ -33,6 +36,7 @@ import { HomeComponent } from './home/home.component';
       { path: 'tictactoe', component: TictactoeComponent },
       { path: 'nqueens', component: NqueensComponent },
       { path: 'dijkstra', component: DijkstraComponent },
+      { path: 'kmp', component: KmpComponent },
     ]),
   ],
   providers: [],

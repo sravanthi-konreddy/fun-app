@@ -35,28 +35,16 @@ export class DijkstraComponent implements OnInit {
     for (let i = 0; i < 25; i++) {
       var rowDiv = document.createElement('div');
       rowDiv.setAttribute('id', 'row-for-buttons');
-      //rowDiv.setAttribute('style', 'width:100%');
-      // rowDiv.setAttribute('class', 'row');
       rowDiv.setAttribute('fxLayout', 'row inline');
-      // rowDiv.setAttribute('_ngcontent-kej-c36', '');
       rowDiv.style.display = 'inline-flex';
       rowDiv.style.flexDirection = 'row';
-      // rowDiv.style.flex
-      //rowDiv.setAttribute('fxFlex', '1 1 auto');
-      //rowDiv.setAttribute('fxLayoutAlign', 'space-around center');
       for (let j = 0; j < 30; j++) {
         var rowDiv1 = document.createElement('div');
-        //rowDiv1.setAttribute('class', 'col');
-        // rowDiv1.setAttribute('fxFlex', '');
         var colDiv = document.createElement('button');
         colDiv.setAttribute('id', i.toString() + '-' + j.toString());
         this.unvisitedNodes.push(i.toString() + '-' + j.toString());
         colDiv.setAttribute('class', 'btn btn-light ');
         colDiv.setAttribute('fxFlex', '');
-
-        // <div _ngcontent-kej-c36="" fxlayout="row inline" style="color: white; flex-direction: row; box-sizing: border-box; display: inline-flex;"
-        // g-reflect-fx-layout="row inline"><button _ngcontent-kej-c36="">1. One</button>
-
         colDiv.style.backgroundColor = '#8585ad';
 
         if (this.sourceNode === i.toString() + '-' + j.toString()) {

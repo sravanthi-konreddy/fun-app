@@ -1,0 +1,31 @@
+<div
+  style="align-content: center; text-align: center;"
+  class="form-group container-fluid h-100 bg-dark"
+>
+  <form
+    ngNativeValidate
+    [formGroup]="searchText"
+    (ngSubmit)="searchFlag || searchThisText()"
+    class="form-group text-center border border-light p-5"
+  >
+    <label style="color: cornsilk;"
+      >Search Text:<input
+        id="inputText"
+        type="text"
+        formControlName="inputText"
+        class="form-control"
+        required
+        pattern="[a-zA-Z ]*" /></label
+    >&nbsp;
+    <button class="btn btn-secondary" type="submit">
+      Search</button
+    >&nbsp;
+  </form>
+
+  <button class="btn btn-secondary" (click)="generateRandomBoard()">
+    Generate Random Board</button
+  >&nbsp;
+
+  <button class="btn btn-secondary" (click)="resetBoard()">Reset</button>
+</div>
+<div id="randBoard"></div>

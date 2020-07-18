@@ -153,7 +153,8 @@ export class KmpComponent implements OnInit {
         var tempm;
         var tempn;
         while (true) {
-          // console.log('in true loop' + m + 'and' + n);
+          //console.log('m:' + m);
+          //console.log('n::' + n);
           if (
             document.getElementById(m.toString() + '-' + n.toString())
               .innerHTML === inputText[templen]
@@ -173,41 +174,12 @@ export class KmpComponent implements OnInit {
               //matchedArray = new Array();
               break;
             }
-            // if (
-            //   direction === 'forward' &&
-            //   !this.backward.includes(m.toString() + '-' + n.toString()) &&
-            //   i !== m &&
-            //   j !== n
-            // ) {
-            //   //
-            //   this.backward.push(m.toString() + '-' + n.toString());
-            // } else if (
-            //   direction === 'upward' &&
-            //   !this.downward.includes(m.toString() + '-' + n.toString()) &&
-            //   i !== m &&
-            //   j !== n
-            // ) {
-            //   this.downward.push(m.toString() + '-' + n.toString());
-            // } else if (
-            //   direction === 'downward' &&
-            //   !this.upward.includes(m.toString() + '-' + n.toString()) &&
-            //   i !== m &&
-            //   j !== n
-            // ) {
-            //   this.upward.push(m.toString() + '-' + n.toString());
-            // } else if (
-            //   direction === 'backward' &&
-            //   !this.forward.includes(m.toString() + '-' + n.toString()) &&
-            //   i !== m &&
-            //   j !== n
-            // ) {
-            //   this.forward.push(m.toString() + '-' + n.toString());
-            // }
-            //
+
             if (!this.forward.includes(m.toString() + '-' + n.toString())) {
               this.forward.push(m.toString() + '-' + n.toString());
               n = n + 1;
               direction = 'forward';
+              //console.log('added in forward');
               this.backward.push(m.toString() + '-' + n.toString());
             } else if (
               !this.upward.includes(m.toString() + '-' + n.toString())
@@ -231,10 +203,22 @@ export class KmpComponent implements OnInit {
               n--;
               this.forward.push(m.toString() + '-' + n.toString());
             } else {
-              templen = 0;
-              matchTextLen = 0;
+              matchedArray.pop();
+              if (matchedArray.length > 0) {
+                templen--;
+                templen--;
 
-              break;
+                var tempvar = matchedArray[matchedArray.length - 1].split('-');
+
+                m = Number(tempvar[0]);
+                n = Number(tempvar[1]);
+
+                continue;
+              } else {
+                templen = 0;
+                matchTextLen = 0;
+                break;
+              }
             }
           } else if (matchTextLen === 0) {
             matchTextLen = 0;

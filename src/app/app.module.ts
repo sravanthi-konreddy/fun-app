@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { KmpComponent } from './kmp/kmp.component';
+import { SudokuComponent } from './sudoku/sudoku.component';
+import { PacManComponent } from './pac-man/pac-man.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { KmpComponent } from './kmp/kmp.component';
     DijkstraComponent,
     HomeComponent,
     KmpComponent,
+    SudokuComponent,
+    PacManComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,7 @@ import { KmpComponent } from './kmp/kmp.component';
       { path: 'nqueens', component: NqueensComponent },
       { path: 'dijkstra', component: DijkstraComponent },
       { path: 'kmp', component: KmpComponent },
+      { path: 'pacman', component: PacManComponent },
     ]),
   ],
   providers: [],

@@ -9,3 +9,8 @@
 #row-for-buttons {
   display: flex;
 }
+
+#errorMsg {
+  text-align: center;
+  color: rgb(243, 44, 104);
+}

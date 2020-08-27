@@ -9,6 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class KmpComponent implements OnInit {
   constructor() {}
+  textFound: boolean;
   searchFlag: boolean;
   randChar: string[];
   forward: string[];
@@ -20,6 +21,8 @@ export class KmpComponent implements OnInit {
   });
   //inputFromTB: string;
   ngOnInit(): void {
+    this.textFound = true;
+
     this.searchFlag = true;
     this.forward = [];
     this.backward = [];
@@ -135,7 +138,6 @@ export class KmpComponent implements OnInit {
         this.downward = [];
         var matchedArray = new Array();
         direction = 'forward';
-        // this.backward.push(i.toString() + '-' + j.toString());
         if (i === 0) {
           this.upward.push(i.toString() + '-' + j.toString());
         }
@@ -153,13 +155,10 @@ export class KmpComponent implements OnInit {
         var tempm;
         var tempn;
         while (true) {
-          //console.log('m:' + m);
-          //console.log('n::' + n);
           if (
             document.getElementById(m.toString() + '-' + n.toString())
               .innerHTML === inputText[templen]
           ) {
-            //console.log('matched' + matchTextLen);
             if (!matchedArray.includes(m.toString() + '-' + n.toString())) {
               templen++;
               matchTextLen++;
@@ -276,19 +275,26 @@ export class KmpComponent implements OnInit {
       }
     }
 
-    for (let i = 0; i < inputText.length; i++) {
-      //setTimeout(() => {
-      for (let j = 0; j < matchText.length; j++) {
-        setTimeout(() => {
-          document.getElementById(matchText[j][i]).style.backgroundColor =
-            'green';
-        }, 20 * i);
+    if (matchText.length === 0) {
+      this.textFound = false;
+    } else {
+      this.textFound = true;
+      for (let i = 0; i < inputText.length; i++) {
+        //setTimeout(() => {
+        for (let j = 0; j < matchText.length; j++) {
+          setTimeout(() => {
+            document.getElementById(matchText[j][i]).style.backgroundColor =
+              'green';
+          }, 20 * i);
+        }
+        //}, 10 * i);
       }
-      //}, 10 * i);
     }
   }
 
   resetBoard() {
+    this.textFound = true;
+
     for (let i = 0; i < 15; i++) {
       for (let j = 0; j < 45; j++) {
         document.getElementById(

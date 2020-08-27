@@ -1,13 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/*CHECK STYLE.CSS FILE
+ FOR THE STYLING FOR
+ PAC-MAN COMPONENT 
+ INSTEAD OF THIS FILE*/
 
-#row-for-divs {
-  display: flex;
-}
-/* .col-div {
+.col-div {
   width: 20px;
   height: 20px;
-} */
+}
+
 .wall {
   background-color: black;
 }
@@ -17,25 +17,25 @@
 }
 
 .parent-div {
-  display: flex;
-  padding: 10px;
+  /* display: flex; */
+  /* padding: 10px; */
   flex-direction: row;
   justify-content: space-around;
 }
 
 .pm-player {
-  height: 10px;
-  width: 10px;
+  /* height: 10px; */
+  /* width: 10px; */
   background-color: rgb(245, 245, 57);
-  border-radius: 50%;
-  display: flex;
+  /* border-radius: 50%; */
+  /* display: inline-block; */
 }
 .pink-ghost {
   height: 10px;
   width: 10px;
   background-color: rgb(221, 18, 170);
   border-radius: 50%;
-  display: flex;
+  display: inline-block;
 }
 
 .blue-ghost {
@@ -43,7 +43,7 @@
   width: 10px;
   background-color: #073ffa;
   border-radius: 50%;
-  display: flex;
+  display: inline-block;
 }
 
 .green-ghost {
@@ -51,7 +51,7 @@
   width: 10px;
   background-color: rgb(59, 241, 13);
   border-radius: 50%;
-  display: flex;
+  display: inline-block;
 }
 
 .orange-ghost {
@@ -59,7 +59,7 @@
   width: 10px;
   background-color: rgb(248, 125, 25);
   border-radius: 50%;
-  display: flex;
+  display: inline-block;
 }
 
 .food {
@@ -67,7 +67,9 @@
 
   font-size: xx-small;
   text-align: center;
-  display: flex;
+  height: 10px;
+  width: 10px;
+  display: inline-block;
   justify-content: space-around;
 }
 .fruit {
@@ -84,5 +86,5 @@
   width: 10px;
   background-color: rgb(250, 4, 4);
   border-radius: 50%;
-  display: flex;
+  display: inline-block;
 }
